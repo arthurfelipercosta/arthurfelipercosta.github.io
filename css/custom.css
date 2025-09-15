@@ -198,9 +198,13 @@ body {
 /* Conteúdo principal */
 .main-content {
     margin-top: 60px;
-    padding: 20px;
-    min-height: calc(100vh - 60px);
-    transition: margin-left 0.3s ease;
+    padding: 32px 24px; /* espaçamento interno: 32px em cima/baixo, 24px nas laterais */
+    max-width: 900px;   /* largura máxima para não ficar esticado em telas grandes */
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
 }
 
 /* Quando sidebar está ativa, mover conteúdo */
