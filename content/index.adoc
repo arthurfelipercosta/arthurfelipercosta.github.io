@@ -1,4 +1,4 @@
-= Arthur Felipe Rodrigues Costa
+= Seu Nome Completo
 :icons: font
 :!sectnums:
 :stylesheet: custom.css
@@ -8,7 +8,7 @@
 ++++
 <!-- Header personalizado -->
 <div class="portfolio-header">
-  <span class="portfolio-title">Arthur Felipe Rodrigues Costa</span>
+  <span class="portfolio-title">Seu Nome Completo</span>
   <span class="portfolio-icons">
     <i class="fa fa-user"></i>
     <i class="fa fa-pencil"></i>
@@ -27,16 +27,17 @@ icon:hand-o-right[] No menu à esquerda você encontra links para meus projetos,
 
 Sinta-se à vontade para entrar em contato ou sugerir melhorias!
 
-Arthur Felipe Rodrigues Costa
+Seu Nome
 
 ++++
 <!-- Ícones Sociais -->
 <div class="portfolio-social">
-  <a href="https://github.com/arthurfelipercosta" target="_blank"><i class="fa fa-github"></i></a>
-  <a href="mailto:arthurfelipercosta@gmail.com"><i class="fa fa-envelope"></i></a>
-  <a href="https://linkedin.com/in/arthurfrc" target="_blank"><i class="fa fa-linkedin"></i></a>
+  <a href="https://twitter.com/seuusuario" target="_blank"><i class="fa fa-twitter"></i></a>
+  <a href="https://github.com/seuusuario" target="_blank"><i class="fa fa-github"></i></a>
+  <a href="mailto:seu@email.com"><i class="fa fa-envelope"></i></a>
+  <a href="https://linkedin.com/in/seuusuario" target="_blank"><i class="fa fa-linkedin"></i></a>
 </div>
 ++++
 
 [.portfolio-footer]
-2025: https://arthurfelipercosta.github.io | link:about.html[Sobre]
+2025: https://seuusuario.github.io | link:about.html[Sobre]
