@@ -1,121 +1,24 @@
+++++
+<div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;">
+    <a href="index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
+    <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
+    <a href="projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a></div>
+++++
 = Arthur Felipe Rodrigues Costa
+:toc: left
+:toc-title: Navegação
 :icons: font
 :!sectnums:
-:stylesheet: custom.css
 :linkcss:
 :copycss:
+:stylesheet: custom.css
 
-++++
-<!-- FontAwesome para ícones -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+Bem-vindo à minha página pessoal!
 
-<!-- Header personalizado -->
-<div class="portfolio-header">
-  <span class="portfolio-title">Arthur Felipe Rodrigues Costa</span>
-  <span class="portfolio-icons">
-    <i class="fa fa-user"></i>
-    <i class="fa fa-pencil"></i>
-    <i class="fa fa-envelope"></i>
-  </span>
-</div>
+Este espaço é dedicado a compartilhar meus projetos, experiências e aprendizados em tecnologia, programação e desenvolvimento de software.
 
-<!-- Botão hambúrguer -->
-<div class="hamburger" onclick="toggleSidebar()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+icon:hand-o-right[] Utilize o menu lateral para navegar entre as seções do site, conhecer meus cursos, tutoriais e um pouco mais sobre minha trajetória.
 
-<!-- Sidebar -->
-<div class="sidebar" id="sidebar">
-  <div class="search-container">
-    <input type="text" placeholder="Search">
-  </div>
-  <ul>
-    <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
-    <li><a href="about.html"><i class="fa fa-user"></i> About</a></li>
-    <li><a href="cursos.html"><i class="fa fa-graduation-cap"></i> Cursos</a></li>
-    <li><a href="tutoriais.html"><i class="fa fa-book"></i> Tutoriais</a></li>
-    <li><a href="projetos.html"><i class="fa fa-code"></i> Projetos</a></li>
-    <li><a href="contato.html"><i class="fa fa-envelope"></i> Contato</a></li>
-  </ul>
-</div>
+Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 
-<!-- Overlay para mobile -->
-<div class="overlay" id="overlay" onclick="closeSidebar()"></div>
-
-<!-- Conteúdo principal -->
-<div class="content">
-++++
-
-[.portfolio-main]
-== Bem-vindo à página pessoal de Arthur Felipe Rodrigues Costa
-
-Este site é dedicado aos meus alunos, que me motivam a continuamente a aprender e repassar para as novas gerações conteúdos normalmente relacionados à programação e educação para Engenharia.
-
-[.portfolio-highlight]
-icon:hand-o-right[] À lado esquerdo da tela tem um menu de links para cursos que ministro e tutoriais que preparei.
-
-Sinta-se à vontade para criticar e dar sugestões de melhoria.
-
-Arthur Felipe
-
-++++
-<!-- Ícones Sociais -->
-<div class="portfolio-social">
-  <a href="https://twitter.com/arthurfelipe" target="_blank"><i class="fab fa-twitter"></i></a>
-  <a href="mailto:arthur@exemplo.com"><i class="fa fa-envelope"></i></a>
-  <a href="https://github.com/arthurfelipe" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="https://linkedin.com/in/arthurfelipe" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="rss.xml"><i class="fa fa-rss"></i></a>
-</div>
-
-</div> <!-- Fim do content -->
-
-<!-- JavaScript para funcionalidade do menu -->
-<script>
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.getElementById('overlay');
-  const hamburger = document.querySelector('.hamburger');
-  const body = document.body;
-  
-  if (window.innerWidth > 768) {
-    // Desktop: toggle classe no body
-    body.classList.toggle('sidebar-active');
-    sidebar.classList.toggle('active');
-  } else {
-    // Mobile: mostrar sidebar e overlay
-    sidebar.classList.add('active');
-    overlay.classList.add('active');
-  }
-  
-  hamburger.classList.toggle('active');
-}
-
-function closeSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  const overlay = document.getElementById('overlay');
-  const hamburger = document.querySelector('.hamburger');
-  const body = document.body;
-  
-  sidebar.classList.remove('active');
-  overlay.classList.remove('active');
-  hamburger.classList.remove('active');
-  
-  if (window.innerWidth > 768) {
-    body.classList.remove('sidebar-active');
-  }
-}
-
-// Fechar sidebar ao redimensionar janela
-window.addEventListener('resize', function() {
-  if (window.innerWidth > 768) {
-    document.getElementById('overlay').classList.remove('active');
-  }
-});
-</script>
-++++
-
-[.portfolio-footer]
-© 2025: arthurfelipercosta.github.io | link:about.html[About]
+Arthur

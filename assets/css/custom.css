@@ -1,340 +1,83 @@
-/* Reset e configurações base */
+/* Portfolio CSS - Arthur Felipe Rodrigues Costa */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f8f9fa;
-    color: #333;
-    margin: 0;
-    transition: margin-left 0.3s ease;
+  font-family: 'Open Sans', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  min-height: 100vh;
 }
 
-/* Header personalizado */
-.portfolio-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    z-index: 1000;
+/* --- MENU LATERAL FIXO --- */
+#side-menu {
+  font-family: 'Open Sans', Arial, sans-serif;
+  width: 220px;
+  background: #222;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding-top: 24px;
+  color: #fff;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
+}
+#side-menu .menu-title {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0 28px 18px 28px;
+  letter-spacing: 1px;
+}
+#side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#side-menu li {
+  margin-bottom: 8px;
+}
+#side-menu a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  transition: background 0.2s, color 0.2s;
+  border-left: 4px solid transparent;
+}
+#side-menu a:hover, #side-menu a.active {
+  background: #333;
+  color: #4CAF50;
+  border-left: 4px solid #4CAF50;
+}
+#side-menu i {
+  margin-right: 10px;
+  font-size: 1.2em;
+  width: 24px;
+  text-align: center;
 }
 
-.portfolio-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #2c3e50;
+/* --- CONTEÚDO PRINCIPAL --- */
+#content {
+  margin-left: 240px; /* espaço para o menu lateral */
+  padding: 40px 32px;
+  max-width: 900px;
 }
 
-.portfolio-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.portfolio-icons i {
-    font-size: 1.2rem;
-    color: #6c757d;
-}
-
-/* Botão hambúrguer */
-.hamburger {
-    position: fixed;
-    top: 15px;
-    left: 20px;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    z-index: 1001;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-}
-
-.hamburger span {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background: #2c3e50;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-}
-
-.hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-}
-
-.hamburger.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-}
-
-/* Sidebar */
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: -280px;
-    width: 280px;
-    height: 100vh;
-    background: #2c3e50;
-    color: white;
-    transition: left 0.3s ease;
-    z-index: 999;
-    overflow-y: auto;
-    padding-top: 80px;
-}
-
-.sidebar.active {
-    left: 0;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar li {
-    border-bottom: 1px solid #34495e;
-}
-
-.sidebar a {
-    display: block;
-    padding: 15px 20px;
-    color: #ecf0f1;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.sidebar a:hover {
-    background: #34495e;
-    padding-left: 30px;
-}
-
-.sidebar i {
-    margin-right: 10px;
-    width: 20px;
-}
-
-/* Overlay para mobile */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: none;
-    z-index: 998;
-}
-
-.overlay.active {
-    display: block;
-}
-
-/* Conteúdo principal */
-.content {
-    margin-top: 80px;
-    padding: 30px;
-    transition: margin-left 0.3s ease;
-}
-
-body.sidebar-active .content {
-    margin-left: 280px;
-}
-
-body.sidebar-active {
-    margin-left: 280px;
-}
-
-/* Seções do portfolio */
-.portfolio-main {
-    max-width: 800px;
-    margin: 0 auto;
-    background: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-}
-
-.portfolio-main h1 {
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #3498db;
-    padding-bottom: 10px;
-}
-
-.portfolio-main h2 {
-    color: #34495e;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.portfolio-highlight {
-    background: #e8f4fd;
-    border-left: 4px solid #3498db;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 5px;
-}
-
-.portfolio-highlight i {
-    color: #3498db;
-    margin-right: 10px;
-}
-
-/* Ícones sociais */
-.portfolio-social {
-    text-align: center;
-    margin: 30px 0;
-}
-
-.portfolio-social a {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 12px;
-    background: #6c757d;
-    color: white;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    line-height: 26px;
-    text-align: center;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.portfolio-social a:hover {
-    background: #3498db;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
-}
-
-.portfolio-social i {
-    font-size: 1.2rem;
-}
-
-/* Footer */
-.portfolio-footer {
-    text-align: center;
-    padding: 30px;
-    color: #6c757d;
-    border-top: 1px solid #dee2e6;
-    margin-top: 40px;
-}
-
-.portfolio-footer a {
-    color: #3498db;
-    text-decoration: none;
-}
-
-.portfolio-footer a:hover {
-    text-decoration: underline;
-}
-
-/* Search box */
-.search-container {
-    padding: 20px;
-    border-bottom: 1px solid #34495e;
-}
-
-.search-container input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #34495e;
-    color: white;
-    font-size: 16px;
-}
-
-.search-container input::placeholder {
-    color: #bdc3c7;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-
-    body.sidebar-active .content,
-    body.sidebar-active {
-        margin-left: 0;
-    }
-
-    .portfolio-main {
-        margin: 10px;
-        padding: 20px;
-    }
-
-    .portfolio-main h1 {
-        font-size: 2rem;
-    }
-
-    .portfolio-title {
-        font-size: 1.1rem;
-    }
-}
-
-/* Animações suaves */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.portfolio-main {
-    animation: fadeIn 0.6s ease-out;
-}
-
-/* Estilos para elementos AsciiDoctor */
-.admonitionblock {
-    margin: 20px 0;
-    padding: 15px;
-    border-radius: 5px;
-    border-left: 4px solid #3498db;
-    background: #f8f9fa;
-}
-
-.listingblock {
-    background: #f8f9fa;
-    border: 1px solid #dee2e6;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-
-.listingblock pre {
-    padding: 20px;
-    margin: 0;
-    overflow-x: auto;
-}
-
-/* Links */
 a {
-    color: #3498db;
-    text-decoration: none;
+  color: #3498db;
+  text-decoration: none;
 }
-
 a:hover {
-    color: #2980b9;
-    text-decoration: underline;
+  text-decoration: underline;
 }
