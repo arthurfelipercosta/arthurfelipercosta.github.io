@@ -1,4 +1,4 @@
-name: Convert AsciiDoc to HTML
+name: Convert AsciiDoc to HTML with Custom Assets
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Setup Asciidoctor
         run: |
@@ -22,7 +22,47 @@ jobs:
           sudo apt-get install asciidoctor
 
       - name: Convert .adoc to .html
-        run: asciidoctor -D . index.adoc
+        run: asciidoctor -D . content/index.adoc
+
+      - name: Copy CSS files
+        run: |
+          mkdir -p css
+          cp -r assets/css/* css/ 2>/dev/null || echo "No CSS files to copy"
+
+      - name: Copy JS files
+        run: |
+          mkdir -p js
+          cp -r assets/js/* js/ 2>/dev/null || echo "No JS files to copy"
+
+      - name: Create directory structure
+        run: |
+          mkdir -p css js
+
+      - name: Copy assets to output directory
+        run: |
+          # Copy CSS files
+          if [ -d "assets/css" ]; then
+            cp -r assets/css/* css/ 2>/dev/null || true
+          fi
+          
+          # Copy JS files
+          if [ -d "assets/js" ]; then
+            cp -r assets/js/* js/ 2>/dev/null || true
+          fi
+          
+          # Copy other assets if they exist
+          if [ -d "assets" ]; then
+            find assets -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.gif" -o -name "*.svg" -o -name "*.ico" \) -exec cp {} . \; 2>/dev/null || true
+          fi
+
+      - name: List generated files
+        run: |
+          echo "Generated files:"
+          ls -la
+          echo "CSS directory:"
+          ls -la css/ 2>/dev/null || echo "No CSS directory"
+          echo "JS directory:"
+          ls -la js/ 2>/dev/null || echo "No JS directory"
 
       - name: Commit and push changes
         env:
@@ -30,6 +70,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add index.html
-          git commit -m 'Convert .adoc to .html'
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/arthurfelipercosta/arthurfelipercosta.github.io.git
+          git add .
+          git commit -m 'Build site with hamburger menu and custom assets' || echo "No changes to commit"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git

@@ -1,0 +1,120 @@
+= Arthur Felipe Rodrigues Costa - Portfólio
+Arthur Costa <arthurfelipercosta@gmail.com>
+:doctype: book
+:icons: font
+:toc: left
+:toc-title: Conteúdo
+:sectnums:
+:source-highlighter: pygments
+:revdate: {localdate}
+:stylesheet-include!:
+:stylesdir: css
+:stylesheet: custom.css
+:sectanchors:
+:linkcss:
+:copycss:
+
+// Menu Hambúrguer e Sidebar
+++++
+<!-- Header com Menu Hambúrguer -->
+<div class="header-container">
+    <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+</div>
+
+<!-- Overlay para fechar sidebar -->
+<div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+<!-- Sidebar -->
+<nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2 class="sidebar-title">Menu</h2>
+    </div>
+    
+    <div class="sidebar-nav">
+        <a href="#home" class="nav-item">
+            <i class="fa fa-home"></i> Home
+        </a>
+        <a href="#about" class="nav-item">
+            <i class="fa fa-user"></i> Sobre Mim
+        </a>
+        <a href="#projects" class="nav-item">
+            <i class="fa fa-folder"></i> Projetos
+        </a>
+        <a href="#courses" class="nav-item">
+            <i class="fa fa-graduation-cap"></i> Cursos
+        </a>
+        <a href="#tutorials" class="nav-item">
+            <i class="fa fa-book"></i> Tutoriais
+        </a>
+        <a href="#contact" class="nav-item">
+            <i class="fa fa-envelope"></i> Contato
+        </a>
+        
+        <div class="nav-separator"></div>
+        
+        <div class="search-container">
+            <input type="text" id="search-input" class="search-input" placeholder="Buscar...">
+        </div>
+    </div>
+</nav>
+
+<!-- Conteúdo Principal -->
+<div class="main-content">
+++++
+
+[id="home"]
+= Bem-vindo ao meu portfólio
+
+Seja bem-vindo ao meu portfólio pessoal! Aqui você encontrará informações sobre meus projetos, habilidades e experiências.
+
+++++
+<div class="action-buttons">
+    <a href="#about" class="btn btn-primary">Conheça-me</a>
+    <a href="#projects" class="btn btn-secondary">Ver Projetos</a>
+</div>
+++++
+
+[id="about"]
+== Sobre Mim
+
+Sou Arthur Felipe Rodrigues Costa, desenvolvedor apaixonado por tecnologia e inovação. 
+
+Minha jornada na programação começou há alguns anos, e desde então tenho explorado diversas tecnologias e linguagens de programação.
+
+**Principais habilidades:**
+- Desenvolvimento Web (HTML, CSS, JavaScript)
+- AsciiDoc e documentação técnica
+- Git e GitHub
+- Automação com GitHub Actions
+
+[id="projects"]
+== Projetos
+
+Aqui estão alguns dos projetos que desenvolvi:
+
+[id="courses"]
+== Cursos
+
+Lista dos cursos e certificações que concluí ou estou fazendo:
+
+[id="tutorials"]
+== Tutoriais
+
+Tutoriais e guias que criei para compartilhar conhecimento:
+
+[id="contact"]
+== Contato
+
+Entre em contato comigo através dos seguintes canais:
+
+- **Email:** arthurfelipercosta@gmail.com
+- **GitHub:** https://github.com/arthurfelipercosta
+- **LinkedIn:** [Seu LinkedIn]
+
+++++
+<script src="js/hamburger-menu.js"></script>
+++++
