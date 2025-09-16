@@ -27,7 +27,7 @@ jobs:
             out_file=$(echo "$file" | sed 's|content/||; s|.adoc$|.html|')
             out_dir=$(dirname "$out_file")
             mkdir -p "$out_dir"
-            asciidoctor -o . "$out_file" "$file"
+            asciidoctor -o "$out_file" "$file"
           done
 
       - name: Copy CSS files
