@@ -81,16 +81,3 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-/* --- FOOTER --- */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  z-index: 99;
-}
