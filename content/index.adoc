@@ -13,7 +13,7 @@
 :linkcss:
 :copycss:
 :stylesheet: custom.css
-:localdatetime:
+:docdatetime:
 
 Bem-vindo à minha página pessoal!
 
@@ -27,6 +27,6 @@ Arthur
 
 ++++
 <footer>
-    <p> Última Atualização {localdatetime} </p>
+    <p> Última Atualização {docdatetime} </p>
 </footer>
 ++++
