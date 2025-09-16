@@ -4,8 +4,3 @@
     <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
     <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a></div>
 ++++
-
-== Bem vindo à minha página pessoal
-Este site é dedicado aos meus projetos pessoais.
-
-No menu lateral, você pode navegar pelas páginas e procurar tudo que criei até hoje entre os arquivos.
