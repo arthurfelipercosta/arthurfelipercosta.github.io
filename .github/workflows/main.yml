@@ -21,8 +21,14 @@ jobs:
           sudo apt-get update
           sudo apt-get install asciidoctor
 
-      - name: Convert .adoc to .html
-        run: asciidoctor -D . content/index.adoc
+      - name: Convert all .adoc to .html
+        run: |
+          find content -name "*.adoc" | while read file; do
+            out_file=$(echo "$file" | sed 's|content/||; s|.adoc$|.html|')
+            out_dir=$(dirname "$out_file")
+            mkdir -p "$out_dir"
+            asciidoctor -o . "$out_file" "$file"
+          done
 
       - name: Copy CSS files
         run: |
