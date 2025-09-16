@@ -2,7 +2,8 @@
 <div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;">
     <a href="index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
     <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
-    <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a></div>
+    <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a>
+</div>
 ++++
 = Arthur Felipe Rodrigues Costa
 :toc: left
@@ -12,13 +13,20 @@
 :linkcss:
 :copycss:
 :stylesheet: custom.css
+:docdatetime: {localdatetime:America/Recife}
 
 Bem-vindo à minha página pessoal!
 
 Este espaço é dedicado a compartilhar meus projetos, experiências e aprendizados em tecnologia, programação e desenvolvimento de software.
 
-icon:hand-o-right[] Utilize o menu lateral para navegar entre as seções do site, conhecer meus cursos, tutoriais e um pouco mais sobre minha trajetória.
+icon:hand-o-left[] Utilize o menu lateral para navegar entre as seções do site, conhecer meus cursos, tutoriais e um pouco mais sobre minha trajetória.
 
 Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 
 Arthur
+
+++++
+<footer>
+    <p> Última Atualização {docdatetime} </p>
+</footer>
+++++
