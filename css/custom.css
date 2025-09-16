@@ -1,4 +1,5 @@
 /* Portfolio CSS - Arthur Felipe Rodrigues Costa */
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
 /* Reset básico */
@@ -8,14 +9,11 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+body {
   font-family: 'Open Sans', Arial, sans-serif;
   background: #fff;
   color: #222;
+  min-height: 100vh;
 }
 
 /* --- MENU LATERAL FIXO --- */
@@ -30,9 +28,8 @@ html, body {
   z-index: 100;
   padding-top: 24px;
   color: #fff;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 2px 0 8px rgba(0,0,0,0.08);
 }
-
 #side-menu .menu-title {
   color: #fff;
   font-size: 1.3rem;
@@ -40,17 +37,14 @@ html, body {
   padding: 0 28px 18px 28px;
   letter-spacing: 1px;
 }
-
 #side-menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 #side-menu li {
   margin-bottom: 8px;
 }
-
 #side-menu a {
   display: flex;
   align-items: center;
@@ -61,14 +55,11 @@ html, body {
   transition: background 0.2s, color 0.2s;
   border-left: 4px solid transparent;
 }
-
-#side-menu a:hover,
-#side-menu a.active {
+#side-menu a:hover, #side-menu a.active {
   background: #333;
   color: #4CAF50;
   border-left: 4px solid #4CAF50;
 }
-
 #side-menu i {
   margin-right: 10px;
   font-size: 1.2em;
@@ -78,18 +69,15 @@ html, body {
 
 /* --- CONTEÚDO PRINCIPAL --- */
 #content {
-  flex: 1; /* ocupa o espaço livre */
   margin-left: 240px; /* espaço para o menu lateral */
   padding: 40px 32px;
   max-width: 900px;
 }
 
-/* --- LINKS --- */
 a {
   color: #3498db;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
