@@ -13,7 +13,7 @@
 :linkcss:
 :copycss:
 :stylesheet: custom.css
-:docdatetime: {localdatetime:America/Recife}
+:localdatetime:
 
 Bem-vindo à minha página pessoal!
 
@@ -27,6 +27,6 @@ Arthur
 
 ++++
 <footer>
-    <p> Última Atualização {docdatetime} </p>
+    <p> Última Atualização {localdatetime} </p>
 </footer>
 ++++
