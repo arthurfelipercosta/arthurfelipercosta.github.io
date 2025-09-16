@@ -13,13 +13,15 @@
 :linkcss:
 :copycss:
 :stylesheet: custom.css
+:iconsdir: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts
+:!iconfont:
 :docdatetime:
 
 Bem-vindo à minha página pessoal!
 
 Este espaço é dedicado a compartilhar meus projetos, experiências e aprendizados em tecnologia, programação e desenvolvimento de software.
 
-icon:hand-o-left[] Utilize o menu lateral para navegar entre as seções do site, conhecer meus cursos, tutoriais e um pouco mais sobre minha trajetória.
+icon:hand-o-left[role=fa] Utilize o menu lateral para navegar entre as seções do site, conhecer meus cursos, tutoriais e um pouco mais sobre minha trajetória.
 
 Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 
