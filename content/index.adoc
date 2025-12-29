@@ -12,4 +12,4 @@ icon:hand-o-left[role=fa] Utilize o menu lateral para navegar entre as seções 
 
 Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 
-_Arthur_
+_Arthur Felipe Rodrigues Costa_
