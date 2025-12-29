@@ -1,5 +1,6 @@
 include::_menu.adoc[]
 
+:title: Meu Portfólio
 = Arthur Felipe Rodrigues Costa
 :toc: left
 :toc-title: Navegação
