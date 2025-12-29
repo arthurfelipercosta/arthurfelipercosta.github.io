@@ -1,6 +1,8 @@
 include::../_menu.adoc[]
 
-:title: Sobre mim - Arthur Felipe
+:title: Meus projetos
 
-= Sobre mim
-...
+== Bem vindo à minha página pessoal
+Este site é dedicado aos meus projetos pessoais.
+
+No menu lateral, você pode navegar pelas páginas e procurar tudo que criei até hoje entre os arquivos.
