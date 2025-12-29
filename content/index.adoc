@@ -15,7 +15,8 @@
 :stylesheet: custom.css
 :iconsdir: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts
 :!iconfont:
-:docdatetime:
+:docdate: {localdate}
+:doctime: {localtime}
 
 Bem-vindo à minha página pessoal!
 
@@ -25,4 +26,7 @@ icon:hand-o-left[role=fa] Utilize o menu lateral para navegar entre as seções 
 
 Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 
-Arthur
+_Arthur_
+
+[.footer]
+Last updated: {docdate} at {doctime}
