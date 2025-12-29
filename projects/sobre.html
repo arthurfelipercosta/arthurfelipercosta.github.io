@@ -438,9 +438,36 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;">
-    <a href="../index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
-    <a href="sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
-    <a href="projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a></div>
+    <a href="index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
+    <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
+    <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a>
+    <a href="projects/curriculo.html" style="color:#fff;display:block;margin-bottom:10px;">Currículo & Resume</a>
+</div>
+<div id="footer" style="position:fixed;bottom:0;left:0;width:200px;background:#222;color:#999;padding:15px 20px;font-size:0.85em;border-top:1px solid #444;">
+    <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #444;">
+        Last updated: <span id="update-gmt"></span> (GMT)
+    </div>
+    <div>
+        Última atualização: <span id="update-br"></span> (Brasília)
+    </div>
+</div>
+<script>
+    function formatarData(date, timezone) {
+        const opcoes = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            timeZone: timezone
+        };
+        return new Intl.DateTimeFormat('pt-BR', opcoes).format(date);
+    }
+    const agora = new Date();
+    document.getElementById('update-gmt').textContent = formatarData(agora, 'UTC');
+    document.getElementById('update-br').textContent = formatarData(agora, 'America/Sao_Paulo');
+</script>
 <div class="sect1">
 <h2 id="_bem_vindo_à_minha_página_pessoal">Bem vindo à minha página pessoal</h2>
 <div class="sectionbody">
@@ -455,7 +482,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-12-29 12:24:40 UTC
+Last updated 2025-12-29 12:35:28 UTC
 </div>
 </div>
 </body>

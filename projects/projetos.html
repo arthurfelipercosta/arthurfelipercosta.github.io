@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 2.0.20">
-<title>Untitled</title>
+<title>Sobre mim</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /*! Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
@@ -438,13 +438,44 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="content">
 <div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;">
-    <a href="../index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
-    <a href="sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
-    <a href="projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a></div>
+    <a href="index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
+    <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
+    <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a>
+    <a href="projects/curriculo.html" style="color:#fff;display:block;margin-bottom:10px;">Currículo & Resume</a>
+</div>
+<div id="footer" style="position:fixed;bottom:0;left:0;width:200px;background:#222;color:#999;padding:15px 20px;font-size:0.85em;border-top:1px solid #444;">
+    <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #444;">
+        Last updated: <span id="update-gmt"></span> (GMT)
+    </div>
+    <div>
+        Última atualização: <span id="update-br"></span> (Brasília)
+    </div>
+</div>
+<script>
+    function formatarData(date, timezone) {
+        const opcoes = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            timeZone: timezone
+        };
+        return new Intl.DateTimeFormat('pt-BR', opcoes).format(date);
+    }
+    const agora = new Date();
+    document.getElementById('update-gmt').textContent = formatarData(agora, 'UTC');
+    document.getElementById('update-br').textContent = formatarData(agora, 'America/Sao_Paulo');
+</script>
+<h1 id="_sobre_mim" class="sect0">Sobre mim</h1>
+<div class="paragraph">
+<p>&#8230;&#8203;</p>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2025-12-29 12:24:40 UTC
+Last updated 2025-12-29 12:35:28 UTC
 </div>
 </div>
 </body>
