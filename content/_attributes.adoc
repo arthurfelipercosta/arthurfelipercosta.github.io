@@ -1,0 +1,12 @@
+:toc: left
+:toc-title: Navegação
+:icons: font
+:!sectnums:
+:linkcss:
+:copycss:
+:stylesheet: custom.css
+:iconsdir: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/fonts
+:!iconfont:
+:docdate: {localdate}
+:doctime: {localtime}
+:nofooter:
