@@ -11,3 +11,6 @@ Conheça os projetos que desenvolvi ao longo da minha jornada em tecnologia.
 
 * **link:https://arthurfelipercosta.github.io/projects/financeiro.html[Financeiro AI Dashboard]** +
 Plataforma completa de gestão financeira familiar desenvolvida com **React** e **TypeScript**. Integra o **Google Gemini API** para fornecer insights inteligentes sobre gastos e **Firebase (Realtime Database & Auth)** para sincronização multiusuário em tempo real. Possui lógica avançada para gestão de parcelamentos, cartões de crédito e visualização de dados dinâmica com **Recharts**.
+
+* **link:https://github.com/arthurfelipercosta/minhas-leituras[Minhas Leituras]** +
+Ecossistema mobile completo para gestão literária desenvolvido com **React Native**, **Expo (SDK 54)** e **TypeScript**. Implementa uma arquitetura robusta baseada em **Context API** para gestão de autenticação e temas dinâmicos (**Dark/Light Mode**). Utiliza **Firebase** para sincronização em nuvem e **AsyncStorage** para persistência offline, contando com módulos de estatísticas avançadas, integração com APIs de livros e sistema de notificações via Toast.
