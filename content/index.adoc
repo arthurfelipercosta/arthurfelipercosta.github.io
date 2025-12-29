@@ -46,6 +46,7 @@
 :!iconfont:
 :docdate: {localdate}
 :doctime: {localtime}
+:nofooter:
 
 Bem-vindo à minha página pessoal!
 
