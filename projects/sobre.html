@@ -437,67 +437,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="header">
 </div>
 <div id="content">
-<div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;overflow-y:auto;">
+<div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;">
+    <a href="index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
+    <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
+    <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a>
+    <a href="projects/curriculo.html" style="color:#fff;display:block;margin-bottom:10px;">Currículo & Resume</a>
     <a href="/" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
     <a href="/projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
-
-    <!-- Menu de Projetos com submenu -->
-    <div style="margin-bottom:10px;">
-        <button id="projetos-toggle" style="background:none;border:none;color:#fff;cursor:pointer;width:100%;text-align:left;padding:0;font-size:1em;display:flex;justify-content:space-between;align-items:center;">
-            Projetos
-            <span id="projetos-arrow" style="display:inline-block;transition:transform 0.3s;">▼</span>
-        </button>
-        <div id="projetos-menu" style="margin-left:15px;max-height:0;overflow:hidden;transition:max-height 0.3s ease;">
-            <a href="/projects/financeiro.html" style="color:#ccc;display:block;margin-bottom:8px;text-decoration:none;font-size:0.9em;">Financeiro</a>
-        </div>
-    </div>
-
-    <a href="#curriculos" style="color:#fff;display:block;margin-bottom:10px;">Currículo & Resume</a>
+    <a href="/projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a>
+    <a href="/projects/curriculo.html" style="color:#fff;display:block;margin-bottom:10px;">Currículo & Resume</a>
 </div>
-
 <div id="footer" style="position:fixed;bottom:0;left:0;width:200px;background:#222;color:#999;padding:15px 20px;font-size:0.85em;border-top:1px solid #444;">
-    <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #444;">
-        Last updated: <span id="update-gmt"></span> (GMT)
-    </div>
-    <div>
-        Última atualização: <span id="update-br"></span> (Brasília)
-    </div>
+   <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #444;">
+       Last updated: <span id="update-gmt"></span> (GMT)
+   </div>
+   <div>
+       Última atualização: <span id="update-br"></span> (Brasília)
+   </div>
 </div>
-
 <script>
-    // Toggle submenu de Projetos
-    const projetosToggle = document.getElementById('projetos-toggle');
-    const projetosMenu = document.getElementById('projetos-menu');
-    const projetosArrow = document.getElementById('projetos-arrow');
-
-    projetosToggle.addEventListener('click', function() {
-        const isOpen = projetosMenu.style.maxHeight && projetosMenu.style.maxHeight !== '0px';
-
-        if (isOpen) {
-            projetosMenu.style.maxHeight = '0px';
-            projetosArrow.style.transform = 'rotate(0deg)';
-        } else {
-            projetosMenu.style.maxHeight = projetosMenu.scrollHeight + 'px';
-            projetosArrow.style.transform = 'rotate(180deg)';
-        }
-    });
-
-    // Formatar data e hora
-    function formatarData(date, timezone) {
-        const opcoes = {
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            timeZone: timezone
-        };
-        return new Intl.DateTimeFormat('pt-BR', opcoes).format(date);
-    }
-    const agora = new Date();
-    document.getElementById('update-gmt').textContent = formatarData(agora, 'UTC');
-    document.getElementById('update-br').textContent = formatarData(agora, 'America/Sao_Paulo');
+   function formatarData(date, timezone) {
+       const opcoes = {
+           year: 'numeric',
+           month: '2-digit',
+           day: '2-digit',
+           hour: '2-digit',
+           minute: '2-digit',
+           second: '2-digit',
+           timeZone: timezone
+       };
+       return new Intl.DateTimeFormat('pt-BR', opcoes).format(date);
+   }
+   const agora = new Date();
+   document.getElementById('update-gmt').textContent = formatarData(agora, 'UTC');
+   document.getElementById('update-br').textContent = formatarData(agora, 'America/Sao_Paulo');
 </script>
 <h1 id="_sobre_mim" class="sect0">Sobre mim</h1>
 <div class="paragraph">
