@@ -4,6 +4,34 @@
     <a href="projects/sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
     <a href="projects/projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a>
 </div>
+
+<div id="footer" style="position:fixed;bottom:0;left:0;width:200px;background:#222;color:#999;padding:15px 20px;font-size:0.85em;border-top:1px solid #444;">
+    <div style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #444;">
+        Last updated: <span id="update-gmt"></span> (GMT)
+    </div>
+    <div>
+        Última atualização: <span id="update-br"></span> (Brasília)
+    </div>
+</div>
+
+<script>
+    function formatarData(date, timezone) {
+        const opcoes = {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            timeZone: timezone
+        };
+        return new Intl.DateTimeFormat('pt-BR', opcoes).format(date);
+    }
+
+    const agora = new Date();
+    document.getElementById('update-gmt').textContent = formatarData(agora, 'UTC');
+    document.getElementById('update-br').textContent = formatarData(agora, 'America/Sao_Paulo');
+</script>
 ++++
 = Arthur Felipe Rodrigues Costa
 :toc: left
@@ -29,4 +57,5 @@ Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 _Arthur_
 
 [.footer]
+Última Atualização: {docdate} at {doctime}
 Last updated: {docdate} at {doctime}
