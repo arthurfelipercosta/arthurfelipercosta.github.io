@@ -1,0 +1,28 @@
+include::../_menu.adoc[]
+include::../_attributes.adoc[]
+
+:title: Financeiro - Arthur Felipe
+:stylesheet: ../css/custom.css
+
+= Financeiro
+
+== Descrição
+
+Uma aplicação completa para gestão de finanças familiares, desenvolvida com React e TypeScript. O projeto oferece controle total de gastos, rendimentos, parcelamentos automáticos e visualização de dados através de gráficos dinâmicos.
+
+=== Características principais
+
+* icon:money[role=fa] *Controle de Gastos*
+* icon:plus-circle[role=fa] *Gerenciamento de Rendimentos*
+* icon:credit-card[role=fa] *Parcelamentos Automáticos*
+* icon:bar-chart[role=fa] *Gráficos Dinâmicos*
+
+== Tecnologias
+
+* React + TypeScript
+* Vite
+* Google Gemini AI Studio
+
+== Repositório
+
+link:https://github.com/arthurfelipercosta/financeiro[Ver no GitHub →]
