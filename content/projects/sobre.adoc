@@ -1,5 +1,7 @@
 include::../_menu.adoc[]
 
+:title: Meus projetos
+
 == Bem vindo à minha página pessoal
 Este site é dedicado aos meus projetos pessoais.
 
