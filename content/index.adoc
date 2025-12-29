@@ -55,7 +55,3 @@ icon:hand-o-left[role=fa] Utilize o menu lateral para navegar entre as seções 
 Sinta-se à vontade para explorar, entrar em contato e sugerir melhorias!
 
 _Arthur_
-
-[.footer]
-Última Atualização: {docdate} at {doctime}
-Last updated: {docdate} at {doctime}
