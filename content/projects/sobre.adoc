@@ -1,9 +1,4 @@
-++++
-<div id="side-menu" style="position:fixed;left:0;top:0;width:200px;height:100%;background:#222;padding:20px;">
-    <a href="../index.html" style="color:#fff;display:block;margin-bottom:10px;">Início</a>
-    <a href="sobre.html" style="color:#fff;display:block;margin-bottom:10px;">Sobre mim</a>
-    <a href="projetos.html" style="color:#fff;display:block;margin-bottom:10px;">Projetos</a></div>
-++++
+include::../_menu.adoc[]
 
 == Bem vindo à minha página pessoal
 Este site é dedicado aos meus projetos pessoais.
