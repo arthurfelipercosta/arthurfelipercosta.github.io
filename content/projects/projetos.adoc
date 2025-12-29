@@ -4,7 +4,3 @@ include::../_attributes.adoc[]
 :title: Meus projetos
 
 = Meus projetos
-== Bem vindo à minha página pessoal
-Este site é dedicado aos meus projetos pessoais.
-
-No menu lateral, você pode navegar pelas páginas e procurar tudo que criei até hoje entre os arquivos.
