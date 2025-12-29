@@ -3,4 +3,11 @@ include::../_attributes.adoc[]
 
 :title: Meus projetos
 
-= Meus projetos
+= Projetos
+
+Conheça os projetos que desenvolvi ao longo da minha jornada em tecnologia.
+
+== Meus Projetos
+
+* **link:https://arthurfelipercosta.github.io/projects/financeiro.html[Financeiro AI Dashboard]** +
+Plataforma completa de gestão financeira familiar desenvolvida com **React** e **TypeScript**. Integra o **Google Gemini API** para fornecer insights inteligentes sobre gastos e **Firebase (Realtime Database & Auth)** para sincronização multiusuário em tempo real. Possui lógica avançada para gestão de parcelamentos, cartões de crédito e visualização de dados dinâmica com **Recharts**.
