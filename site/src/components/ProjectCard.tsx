@@ -5,8 +5,14 @@ import { Link } from "react-router-dom";
 type Project = {
     id: string;
     title: string;
-    status: string;
-    description: string;
+    status: {
+        pt: string;
+        en: string;
+    };
+    description: {
+        pt: string;
+        en: string;
+    };
     technologies: string[];
 };
 
@@ -19,12 +25,12 @@ export default function ProjectCard({ project, language }: Props) {
     return (
         <article className="project-card">
             <div className="project-card-top">
-                <span className="project-status">{project.status}</span>
+                <span className="project-status">{project.status[language]}</span>
                 <span className="project-arrow">↗</span>
             </div>
 
             <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <p>{project.description[language]}</p>
 
             <div className="tags">
                 {project.technologies.map((technology) => (

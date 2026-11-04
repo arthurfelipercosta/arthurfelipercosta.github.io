@@ -5,14 +5,14 @@
 :root {
   font-family: "DM Sans", sans-serif;
   color: #edf0f7;
-  background: #0b0d12;
+  background: #0f172a;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --muted: #9ca3b4;
-  --border: #252a35;
-  --panel: #11141c;
-  --accent: #a5b4fc;
+  --muted: #94a3b8;
+  --border: #263449;
+  --panel: #162033;
+  --accent: #38bdf8;
 }
 
 * { box-sizing: border-box; }
@@ -23,14 +23,14 @@ button { font: inherit; }
 .header {
   height: 76px; padding: 0 max(6%, calc((100% - 1160px)/2));
   display: flex; align-items: center; justify-content: space-between;
-  border-bottom: 1px solid var(--border); background: #0b0d12ee;
+  border-bottom: 1px solid var(--border); background: #0f172aee;
   position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px);
 }
 .brand { font: 700 1.15rem "Space Grotesk", sans-serif; }
 .brand span { color: var(--accent); }
 .header nav { display: flex; gap: 30px; color: var(--muted); font-size: .9rem; }
 .header nav a:hover, .contact-links a:hover { color: white; }
-.language-button { color: #edf0f7; background: transparent; border: 1px solid #383e4d; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.language-button { color: #edf0f7; background: transparent; border: 1px solid #334155; border-radius: 8px; padding: 8px 12px; cursor: pointer; }
 .hero, .section, .contact-section, .project-detail {
   width: min(100% - 48px, 1080px); margin-inline: auto;
 }
@@ -44,7 +44,7 @@ button { font: inherit; }
 .hero-description { max-width: 600px; color: var(--muted); font-size: 1.15rem; line-height: 1.8; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
 .button { padding: 13px 18px; border-radius: 9px; font-weight: 600; font-size: .9rem; }
-.button-primary { background: #c7d2fe; color: #151728; }
+.button-primary { background: #38bdf8; color: #082f49; }
 .button-secondary { border: 1px solid #343947; }
 .hero-tech, .tags, .contact-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .hero-tech { margin-top: 45px; }
@@ -54,10 +54,10 @@ button { font: inherit; }
 .section h2, .contact-section h2 { font: 600 clamp(1.8rem, 4vw, 2.8rem)/1.2 "Space Grotesk", sans-serif; letter-spacing: -.04em; margin: 12px 0; }
 .section-count { color: var(--muted); font-size: .8rem; }
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-.project-card { border: 1px solid var(--border); border-radius: 14px; padding: 25px; background: linear-gradient(145deg, #131721, #0e1016); transition: border-color .2s, transform .2s; }
-.project-card:hover { border-color: #59617a; transform: translateY(-3px); }
+.project-card { border: 1px solid var(--border); border-radius: 14px; padding: 25px; background: linear-gradient(145deg, #162033, #111827); transition: border-color .2s, transform .2s; }
+.project-card:hover { border-color: #0284c7; transform: translateY(-3px); }
 .project-card-top { display: flex; justify-content: space-between; align-items: center; }
-.project-status { color: #aab4c9; background: #202634; border-radius: 5px; padding: 6px 8px; font-size: .72rem; }
+.project-status { color: #cbd5e1; background: #263449; border-radius: 5px; padding: 6px 8px; font-size: .72rem; }
 .project-arrow { color: var(--accent); font-size: 1.2rem; }
 .project-card h3 { font: 600 1.35rem "Space Grotesk", sans-serif; margin: 25px 0 10px; }
 .project-card p, .about-section p, .contact-section p, .project-detail p { color: var(--muted); line-height: 1.8; }
@@ -69,10 +69,22 @@ button { font: inherit; }
 .contact-section { border-top: 1px solid var(--border); padding: 75px 0 100px; }
 .contact-links { margin-top: 24px; }
 .contact-links a { border: 1px solid var(--border); padding: 11px 15px; border-radius: 8px; }
-.project-detail { min-height: 75vh; padding: 80px 0; }
-.project-detail .eyebrow { display: block; margin-top: 60px; }
+.project-detail { min-height: 75vh; padding: 60px 0 100px; }
+.project-detail > .text-link { margin-top: 0; margin-bottom: 36px; }
+.project-detail .eyebrow { display: block; margin-top: 24px; }
 .project-detail h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); }
-.detail-description { max-width: 680px; font-size: 1.15rem; }
+.detail-section { margin-top: 42px; }
+.detail-section h2 { font: 600 clamp(1.4rem, 3vw, 1.8rem)/1.3 "Space Grotesk", sans-serif; letter-spacing: -.035em; margin: 0 0 18px; }
+.detail-description { max-width: 680px; font-size: 1.1rem; margin-top: 0; }
+.detail-highlights { list-style: none; padding: 0; margin: 0; max-width: 760px; display: grid; gap: 12px; }
+.detail-highlights li { position: relative; padding: 15px 18px 15px 42px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: #dbe5f2; line-height: 1.7; }
+.detail-highlights li::before { content: "✓"; position: absolute; left: 16px; top: 15px; color: var(--accent); font-weight: 700; }
+.detail-section .tags { margin: 0; }
+.detail-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.detail-gallery figure { margin: 0; padding: 10px; overflow: hidden; border: 1px solid var(--border); border-radius: 12px; background: var(--panel); }
+.detail-gallery img { display: block; width: 100%; height: auto; border-radius: 6px; }
+.project-detail > .button { display: inline-block; margin-top: 36px; transition: background .2s, transform .2s; }
+.project-detail > .button:hover { background: #7dd3fc; transform: translateY(-2px); }
 .detail-note { margin-top: 50px; }
 .resume-placeholder { min-height: 70vh; }
 .footer { border-top: 1px solid var(--border); color: var(--muted); text-align: center; padding: 25px; font-size: .8rem; }
@@ -84,6 +96,11 @@ button { font: inherit; }
   .hero-description { font-size: 1rem; }
   .project-grid { grid-template-columns: 1fr; }
   .section { padding: 50px 0; }
+  .project-detail { padding-top: 36px; padding-bottom: 70px; }
+  .project-detail .eyebrow { margin-top: 36px; }
+  .detail-section { margin-top: 34px; }
+  .detail-gallery { grid-template-columns: 1fr; }
+  .detail-highlights li { padding-right: 14px; }
 }
 @media (max-width: 420px) {
   .header nav { gap: 9px; }
