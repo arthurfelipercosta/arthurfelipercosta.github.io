@@ -15,9 +15,9 @@ export default function Header({ language, onToggleLanguage }: HeaderProps) {
             <Link to="/" className="brand">Arthur Costa<span>.</span></Link>
 
             <nav>
-                <a href="/#projects">{en ? "Projects" : "Projetos"}</a>
-                <a href="/#about">{en ? "About" : "Sobre mim"}</a>
-                <a href="/#contact">{en ? "Contact" : "Contato"}</a>
+                <Link to="/#projects">{en ? "Projects" : "Projetos"}</Link>
+                <Link to="/#about">{en ? "About" : "Sobre mim"}</Link>
+                <Link to="/#contact">{en ? "Contact" : "Contato"}</Link>
             </nav>
 
             <button className="language-button" onClick={onToggleLanguage}>
