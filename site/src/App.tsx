@@ -1,17 +1,28 @@
 // src/App.tsx
 
-import { useState } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { HashRouter, Route, Routes, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Project from "./pages/Project";
+import Resume from "./pages/Resume";
 import "./styles/global.css";
 
-export default function App() {
+function AppContent() {
   const [language, setLanguage] = useState<"pt" | "en">("pt");
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
 
   return (
-    <HashRouter>
+    <>
       <Header
         language={language}
         onToggleLanguage={() => setLanguage((current) => current === "pt" ? "en" : "pt")}
@@ -20,16 +31,19 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home language={language} />} />
           <Route path="/projects/:id" element={<Project language={language} />} />
-          <Route path="/resume" element={
-            <section className="section resume-placeholder">
-              <h1>{language === "pt" ? "Currículo e Resume" : "CV & Résumé"}</h1>
-              <p>{language === "pt" ? "Os documentos serão adicionados nesta etapa." : "Documents will be added in a later step."}</p>
-            </section>
-          } />
+          <Route path="/resume" element={<Resume language={language} />} />
           <Route path="*" element={<section className="section"><h1>404</h1></section>} />
         </Routes>
       </main>
       <footer className="footer">© {new Date().getFullYear()} Arthur Costa</footer>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <HashRouter>
+      <AppContent />
     </HashRouter>
   );
 }

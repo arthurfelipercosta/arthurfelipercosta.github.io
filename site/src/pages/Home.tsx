@@ -30,12 +30,12 @@ export default function Home({ language }: Props) {
                 </p>
 
                 <div className="hero-actions">
-                    <a className="button button-primary" href="#projects">
+                    <Link to="/#projects" className="button button-primary">
                         {en ? "Explore projects" : "Explorar projetos"} ↓
-                    </a>
-                    <a className="button button-secondary" href="#contact">
+                    </Link>
+                    <Link to="/#contact" className="button button-secondary">
                         {en ? "Get in touch" : "Entrar em contato"} ↗
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="hero-tech">
